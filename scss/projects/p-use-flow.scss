@@ -1,0 +1,82 @@
+.p-use-flow {
+  &__inner {
+    padding-top: 58px;
+    &__title {
+      height: 34px;
+      text-align: center;
+      font-size: 36px;
+      font-weight: bold;
+      line-height: 34px;
+      @include mq(sp) {
+        font-size: 28px;
+      }
+    }
+    &__list {
+      margin-top: 53px;
+      @include mq(sp-and-tab) {
+        padding: 0 16px;
+      }
+      &__row {
+        display: flex;
+        &:not(:first-child){
+          padding-top: 8px;
+        }
+        &__no {
+          display: inline-block;
+          padding: 24px 23px;
+          font-weight: bold;
+          background-color: #F5A623;
+          color: white;
+          @include mq(sp) {
+            display: flex;
+            align-items: center;
+          }
+        }
+        &__contact {
+          width: 214.5px;
+          padding-left: 21px;
+          font-size: 18px;
+          font-weight: bold;
+          background-color: #F8F8F8;
+          @include flexbox(nowrap, flex-start, center);
+          @include mq(sp) {
+            flex: 1;
+            @include flexbox(nowrap, flex-start, inherit, column);
+            padding: 24px 0 22px 21px;
+          }
+          &__text-sp {
+            display: none;
+            font-size: 15px;
+            font-weight: 500;
+            margin-top: 12px;
+            margin-right: 8px;
+            line-height: 1.7;
+            @include mq(sp) {
+              display: block;
+            }
+          }
+        }
+        &__text {
+          display: flex;
+          align-items: center;
+          position: relative;
+          flex: 1;
+          padding-left: 53.5px;
+          background-color: #F8F8F8;
+          @include mq(sp) {
+            display: none;
+          }
+          &::before {
+            position: absolute;
+            top: 17px;
+            left: 0;
+            content: "";
+            width: 1px;
+            height: 29px;
+            background-color: #C3C3C3;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,11 @@
+@import "common/style.scss";
+@import "common/mixin.scss";
+@import "common/components.scss";
+@import "parts/header.scss";
+@import "parts/breadcrumbs.scss";
+@import "parts/thanks.scss";
+@import "parts/footer.scss";
+
+main {
+  margin-top: 80px;
+}

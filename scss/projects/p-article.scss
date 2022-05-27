@@ -1,0 +1,109 @@
+.p-article {
+  &__inner {
+    display: inline-block;
+    width: 100%;
+    &__category-name {
+      display: inline-block;
+      text-align: center;
+      min-width: 110px;
+      height: 31px;
+      font-size: 12px;
+      background-color: #1B224C;
+      color: white;
+      line-height: 31px;
+      &:not(:first-child) {
+        margin-left: 8px;
+      }
+    }
+    &__title {
+      margin-top: 24px;
+      margin-bottom: 22px;
+      font-size: 28px;
+      font-weight: bold;
+      line-height: 1.5;
+      @include line-clump(3);
+    }
+    &__flex {
+      display: flex;
+      &__date {
+        margin-left: auto;
+        @include mq(sp) {
+          font-size: 12px;
+        }
+      }
+    }
+    &__img {
+      width: 100%;
+      margin-top: 22px;
+    }
+    &__content {
+      margin-top: 40px;
+      h2 {
+        margin-bottom: 28px;
+        font-size: 26px;
+        font-weight: bold;
+      }
+      h3 {
+        padding: 3px 10px;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        font-size: 22px;
+        font-weight: bold;
+        border-left: 4px solid #000;
+      }
+      p {
+        min-height: 63px;
+        line-height: 1.5;
+        a {
+          margin-top: 30px;
+          font-size: 18px;
+          color: #F5A623;
+        }
+      }
+      blockquote {
+        position: relative;
+        margin: 30px 0;
+        padding: 27px 26px 17px 74px;
+        background-color: #F8F8F8;
+        &::before {
+          content: '“';
+          position: absolute;
+          top: 24px;
+          left: 17px;
+          font-size: 5rem;
+          color: #B4B4B4;
+        }
+        p {
+          max-width: 490px;
+          margin-left: auto;
+        }
+      }
+      .wp-block-image {
+        margin: 0 0 30px 0;
+        img {
+          width: 100%;
+        }
+      }
+      ul {
+        max-width: 610px;
+        min-height: 120px;
+        padding: 0 36px;
+        li {
+          position: relative;
+          display: block;
+          line-height: 1.5;
+          &::before {
+            content:  "";
+            position: absolute;
+            top: 8px;
+            left: -32px;
+            width: 11px;
+            height: 11px;
+            background-color: #F5A623;
+            border-radius:  50%;
+          }
+        }
+      }
+    }
+  }
+}
