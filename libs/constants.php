@@ -12,7 +12,11 @@ class Constants
     const DIR_PATH_TEMPLATES = "/templates";
     /** フォルダパス ライブラリ */
     const DIR_PATH_LIBS = "/libs";
+    /** フォルダパス ビュー */
+    const DIR_PATH_VIEWS = "/views";
 
+    /** ファイルパス api-test */
+    const FILE_PATH_API_TEST = "/api-test";
     /** ファイルパス ヘッダ */
     const FILE_PATH_HEAD = "/head";
     /** ファイルパス スクリプト */

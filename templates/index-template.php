@@ -1,11 +1,10 @@
 <html>
-  <?= get_template_part(CommonUtil::joinDirPathLibs(Constants::FILE_PATH_HEAD)); ?>
+  <?= get_template_part(CommonUtil::joinDirPathLibViews(Constants::FILE_PATH_HEAD)); ?>
   <body>
     <div class="l-wrapper">
       <?= get_header(); ?>
       <main class="l-main">
         <?php
-          get_template_part(CommonUtil::joinDirPathProjects(Constants::FILE_PATH_HERO), null, $args);
           foreach ($args["component_names"] as $file_name) {
               get_template_part($file_name, null, $args);
           }
@@ -14,7 +13,7 @@
         ?>
       </main>
       <?php
-        get_template_part(CommonUtil::joinDirPathLibs(Constants::FILE_PATH_SCRIPT));
+        get_template_part(CommonUtil::joinDirPathLibViews(Constants::FILE_PATH_SCRIPT));
         get_footer();
       ?>
     </div>
