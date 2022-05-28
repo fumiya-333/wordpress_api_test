@@ -89,4 +89,22 @@ class CommonUtil
     {
         return get_query_var("paged") ? get_query_var("paged") : 1;
     }
+
+    /**
+     * HTTP通信（get）
+     *
+     * @param  mixed $url
+     * @param  mixed $args
+     * @return void
+     */
+    public static function getHttpResponse($url, $args){
+        $response = "";
+        if($args){
+            $response = wp_remote_get($url, $args);
+        }else{
+            $response = wp_remote_get($url);
+        }
+
+        return json_decode($response["body"]);
+    }
 }
